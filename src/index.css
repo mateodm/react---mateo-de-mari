@@ -11,3 +11,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.cuadro {
+  border: solid blue dotted; padding: 0.5em;
+}
