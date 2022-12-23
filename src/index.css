@@ -14,3 +14,7 @@ code {
 .cuadro {
   border: solid blue dotted; padding: 0.5em;
 }
+.img_carrito {
+  display: flex;
+  width: 3vh;
+}

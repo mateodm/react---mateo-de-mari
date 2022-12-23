@@ -1,8 +1,11 @@
 import Navbar from "./components/Navbar"
 import Card from "./components/Card"
-
+import Error404 from "./components/Error404"
+import { BrowserRouter as Router , Routes, Route } from "react-router-dom";
 
 function App() {
+
+
   let stock = [
     { id: 1, nombre: "Mesa", precio: "1000", img: "./logo.svg", },
     { id: 2, nombre: "Silla", precio: "500", img: "./logo.svg", },
@@ -12,12 +15,18 @@ function App() {
     { id: 6, nombre: "Auriculares", precio: "300", img: "./logo.svg", }
   ]
 
-
-
   return (
     <div>
-      <Navbar />
-      <div class="row d-flex justify-content-center">
+    <Router> 
+            <Navbar />
+      <Routes>
+        <Route path="/" />
+        <Route path="*" element={<Error404/>}/>
+        <Route path="/carrito" />
+        <Route path="/checkout" />
+      </Routes>
+    </Router>
+    <div class="row d-flex justify-content-center">
         {stock.map(({ nombre, precio, img }, index) => (
           <Card
             key={index}

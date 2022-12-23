@@ -1,5 +1,5 @@
 import React from "react";
-
+import carrito from "../carrito.png"
 const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg bg-light mb-5">
@@ -21,6 +21,11 @@ const Navbar = () => {
                             <li><a className="dropdown-item" href="#">Electronica</a></li>
                             <li><a className="dropdown-item" href="#">Muebles</a></li>
                         </ul>
+                    </li>
+                    <li>
+                    <div>
+                        <a href="/carrito"><img class="img_carrito" src={carrito}/></a>
+                    </div>
                     </li>
                 </ul>
                 <form className="d-flex" role="search">
