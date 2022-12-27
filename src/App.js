@@ -2,6 +2,8 @@ import Navbar from "./components/Navbar"
 import Card from "./components/Card"
 import Error404 from "./components/Error404"
 import { BrowserRouter as Router , Routes, Route } from "react-router-dom";
+import ItemListContainer from "./components/ItemContentListener/ItemListCointainer.jsx"
+import ItemDetailContainer from "./components/ItemContentListener/ItemDetailContainer";
 
 function App() {
 
@@ -21,6 +23,7 @@ function App() {
             <Navbar />
       <Routes>
         <Route path="/" />
+        <Route path="categoria/id/nombre" element={<ItemListContainer/>} />
         <Route path="*" element={<Error404/>}/>
         <Route path="/carrito" />
         <Route path="/checkout" />
