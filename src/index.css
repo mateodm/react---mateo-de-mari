@@ -17,4 +17,5 @@ code {
 .img_carrito {
   display: flex;
   width: 3vh;
+  margin-top: 0.8vh;
 }

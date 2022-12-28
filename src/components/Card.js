@@ -1,7 +1,8 @@
-import React from "react"
+/* import React from "react"
+
 
 const Card = (props) => {
-    const {id, nombre, precio, img} = props;
+    const {id, nombre, precio, img, categoria} = props;
     return (
         <div className="card col-md-4 me-4 mb-4" style={{width:"20vw"}}>
             <img src={img} className="card-img-top" alt="..."/>
@@ -15,5 +16,4 @@ const Card = (props) => {
 }
 
 
-
-export default Card
+export default Card */
