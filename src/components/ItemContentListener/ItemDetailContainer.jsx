@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useState,useEffect} from "react"
-import ConstructorProducto from './ItemDetailConstructor.jsx'
+import ConstructorProducto from './ItemDetailRender.jsx'
 import consultarBDD from "../funcion"
 const DetallesProducto = () => {
     const [producto, setProducto] = useState([])

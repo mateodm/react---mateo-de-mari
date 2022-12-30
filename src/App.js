@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar"
+import Footer from "./components/Footer.jsx"
 import Error404 from "./components/Error404"
 import { BrowserRouter as Router , Routes, Route } from "react-router-dom";
 import ItemListContainer from "./components/ItemContentListener/ItemListCointainer.jsx"
@@ -17,6 +18,7 @@ function App() {
         <Route path="/checkout" />
         <Route path="/:categoria" />
       </Routes>
+      <Footer />
     </Router>
     </div>
   )

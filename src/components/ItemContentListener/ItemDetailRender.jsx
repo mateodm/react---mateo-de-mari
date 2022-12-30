@@ -11,7 +11,7 @@ const ConstructorProducto = ({item}) => {
         <div class="small mb-1"> {item.categoria} </div>
             <h1 class="display-5 fw-bolder">{item.nombre}</h1>
             <div class="fs-5 mb-5">
-                <span>{item.precio}</span>
+                <span>{item.precio} ars</span>
             </div>
             <p class="lead">{item.descripcion}</p>
             <div class="d-flex">
