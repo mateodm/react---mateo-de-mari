@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 const Item = (props) => {
     const {id, nombre, categoria, precio} = props
     return (
-    <div className="row">
-        <Link to={`/item/${categoria}/${id}/${nombre}`}>
-            <div className="col-md-4 me-4 mb-4" >
+    <div className="row d-grid">
+        <Link to={`/item/${id}`}>
+            <div className="card col-md-4 me-4 mb-4" >
             <img src="../../carrito.png" className="card-img-top" alt="..."/>
                 <div className="card-body">
                     <h5 className="card-title">{nombre}</h5>
@@ -22,10 +22,3 @@ const Item = (props) => {
 export default Item
 
 
-/* 
-const Item = (props) => {
-    const { categoria, id} = props;
-        return (
-            <Link to={`/item/${categoria}/${id}`}>
-        )
-} */

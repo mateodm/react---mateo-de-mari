@@ -1,11 +1,20 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-
+import { useState,useEffect} from "react"
+import ConstructorProducto from './ItemDetailConstructor.jsx'
+import consultarBDD from "../funcion"
 const DetallesProducto = () => {
+    const [producto, setProducto] = useState([])
+    const {id} = useParams()
+    useEffect(() => {
+        consultarBDD('../json/stock.json').then(productos=>{
+        const product = productos.find(productos => productos.id === parseInt(id))
+        setProducto(product)
 
-    const { id, nombre, precio} = useParams()
+        })
+        }, [id]);
     return (
-        <h1>El producto ({id}) {nombre} {precio} ha sido cargado exitosamente. </h1>
+        <ConstructorProducto item= {producto} />
     )
 }
 

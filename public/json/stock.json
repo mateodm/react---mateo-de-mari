@@ -1,8 +1,8 @@
 [
-    { "id": 1, "nombre": "Mesa", "precio": "1000", "img": "./logo.svg"},
-    { "id": 2, "nombre": "Silla", "precio": "500", "img": "./logo.svg"},
-    { "id": 3, "nombre": "Estante", "precio": "800", "img": "./logo.svg"},
-    { "id": 4, "nombre": "Televisor", "precio": "2000", "img": "./logo.svg" },
-    { "id": 5, "nombre": "Parlante", "precio": "600", "img": "./logo.svg"},
-    { "id": 6, "nombre": "Auriculares", "precio": "300", "img": "./logo.svg" }
+    { "categoria": "Mueble", "id": 1, "nombre": "Mesa", "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", "precio": "1000", "img": "../Dining-Room-Table-PNG-Picture.png"},
+    { "categoria": "Mueble", "id": 2, "nombre": "Silla", "descripcion": "when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.", "precio": "500", "img": "./logo512.png"},
+    { "categoria": "Mueble", "id": 3, "nombre": "Estante", "descripcion": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.", "precio": "800", "img": "./logo.svg"},
+    { "categoria": "Electronica", "id": 4, "nombre": "Televisor", "descripcion": "Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, , comes from a line in section 1.10.32.", "precio": "2000", "img": "./logo512.png" },
+    { "categoria": "Electronica", "id": 5, "nombre": "Parlante", "descripcion": "literalmente un parlante", "precio": "600", "img": "./logo.svg"},
+    { "categoria": "Electronica", "id": 6, "nombre": "Auriculares", "descripcion": "literalmente auriculares", "precio": "300", "img": "./logo.svg" }
 ]

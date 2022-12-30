@@ -1,22 +1,22 @@
 import React from "react"
 import Item from "./Item.jsx"
-
+import { useEffect } from "react"
+import { useState } from "react"
+import { useParams } from "react-router-dom"
 const ListaObjetos = () => {
-
-let stock = [
-    { id: 1, categoria: "mueble", nombre: "Mesa", precio: "1000", img: "./logo.svg", },
-    { id: 2, categoria: "mueble", nombre: "Silla", precio: "500", img: "./logo.svg", },
-    { id: 3, categoria: "mueble", nombre: "Estante", precio: "800", img: "./logo.svg", },
-    { id: 4, categoria: "electronica", nombre: "Televisor", precio: "2000", img: "./logo.svg", },
-    { id: 5, categoria: "electronica", nombre: "Parlante", precio: "600", img: "./logo.svg", },
-    { id: 6, categoria: "electronica", nombre: "Auriculares", precio: "300", img: "./logo.svg", }
-  ]
-return (
+  const [stock, setStock] = useState([])
+  const {id} = useParams()
+  useEffect(() => {
+    fetch("./json/stock.json")
+    .then((res) => res.json()).then((productos)=> setStock(productos))
+    }, [id]);
+  return (
     <>
     {stock.map(({id, nombre, categoria, precio, img}) => (
-    <Item id={id} nombre={nombre} categoria={categoria} precio={precio} img={img}/>
+    <Item id ={id} nombre ={nombre} categoria = {categoria} precio ={precio} img ={img}/>
     ))}
     </>
 )
-}
+    }
+
 export default ListaObjetos
