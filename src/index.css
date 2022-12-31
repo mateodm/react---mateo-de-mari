@@ -19,3 +19,10 @@ code {
   width: 3vh;
   margin-top: 0.8vh;
 }
+.link {
+  text-decoration: none;
+  color: black;
+}
+.card_img {
+ height: 10vh;
+}

@@ -5,11 +5,21 @@ import { useState } from "react"
 import { useParams } from "react-router-dom"
 const ListaObjetos = () => {
   const [stock, setStock] = useState([])
+  const {categoria} = useParams()
   const {id} = useParams()
   useEffect(() => {
-    fetch("./json/stock.json")
-    .then((res) => res.json()).then((productos)=> setStock(productos))
-    }, [id]);
+    if(categoria) {
+    fetch("../json/stock.json")
+    .then((res) => res.json()).then(productos => {
+      let productosCategoria = productos.filter(productos => productos.categoria === categoria)
+      setStock(productosCategoria)
+    })
+    }
+    else {
+      fetch("./json/stock.json")
+      .then((res) => res.json()).then((productos)=> setStock(productos))
+     }
+  }, [categoria]);
   return (
     <>
     {stock.map(({id, nombre, categoria, precio, img}) => (
