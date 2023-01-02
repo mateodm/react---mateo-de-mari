@@ -22,9 +22,16 @@ const ListaObjetos = () => {
   }, [categoria]);
   return (
     <>
+    <div className="row">
+    <div className="col-md-2"></div>
+    <div className="productos col-md-8">
     {stock.map(({id, nombre, categoria, precio, img}) => (
     <Item id ={id} nombre ={nombre} categoria = {categoria} precio ={precio} img ={img}/>
     ))}
+    </div>
+    <div className="col-md-2"></div>
+    </div>
+
     </>
 )
     }

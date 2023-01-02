@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-width: 100vw;
 }
 
 code {
@@ -24,5 +25,13 @@ code {
   color: black;
 }
 .card_img {
- height: 10vh;
+ height: 14vh;
+}
+
+.productos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  align-items: flex-start;
 }
