@@ -5,6 +5,8 @@ const Footer = () => {
     return (
         <section className= "row bg-secondary"> 
             <footer className="bg-light text-black text-center text-md-start">
+            <div className="row footertopbox">
+            </div>
                 <div className="container p-4">
                     <div className="row">
                         <div className="col-lg-6 col-md-12 mb-4 mb-md-0">

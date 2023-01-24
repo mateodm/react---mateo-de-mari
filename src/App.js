@@ -1,10 +1,12 @@
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer.jsx"
+import Carousel from "./components/Carousel";
 import Error404 from "./components/Error404"
 import { BrowserRouter as Router , Routes, Route } from "react-router-dom";
 import ItemListContainer from "./components/ItemContentListener/ItemListCointainer.jsx"
 import ItemDetailContainer from "./components/ItemContentListener/ItemDetailContainer.jsx";
 import "./index.css";
+import { useEffect } from "react"
 
 function App() {
   return (

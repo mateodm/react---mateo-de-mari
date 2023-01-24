@@ -1,20 +1,20 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import { useState,useEffect} from "react"
+import { useState, useEffect } from "react"
 import ConstructorProducto from './ItemDetailRender.jsx'
-import consultarBDD from "../funcion"
+import GetDataBase from "../hooks/GetDataBase.jsx"
 const DetallesProducto = () => {
+    const {stock, getProducts} = GetDataBase()
     const [producto, setProducto] = useState([])
-    const {id} = useParams()
+    const { id } = useParams()
     useEffect(() => {
-        consultarBDD('../json/stock.json').then(productos=>{
-        const product = productos.find(productos => productos.id === parseInt(id))
-        setProducto(product)
-
-        })
-        }, [id]);
+        getProducts()
+            let product = stock.find(productos => productos.id === parseInt(id))
+            setProducto(product)
+        }
+    , [id]);
     return (
-        <ConstructorProducto item= {producto} />
+        <ConstructorProducto item={producto} />
     )
 }
 
