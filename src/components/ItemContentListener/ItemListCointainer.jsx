@@ -11,7 +11,6 @@ const ListaObjetos = () => {
   const {id} = useParams()
   const [productos, setProductos] = useState([])
   useEffect(() => {
-    getProducts()
     if (categoria) {
       getProducts()
           let productosCategoria = stock.filter(productos => productos.categoria === categoria) 

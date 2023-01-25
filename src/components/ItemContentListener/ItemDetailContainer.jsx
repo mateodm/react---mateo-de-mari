@@ -10,7 +10,6 @@ const DetallesProducto = () => {
     useEffect(() => {
         getProducts()
             let product = stock.find(productos => productos.id === parseInt(id))
-            setProducto(product)
         }
     , [id]);
     return (
