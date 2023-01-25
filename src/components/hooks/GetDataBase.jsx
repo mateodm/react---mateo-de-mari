@@ -1,23 +1,24 @@
 import { useState } from "react"
 import { bd } from "../../firebase"
 import { collection, docs, doc, addDoc,  getDocs } from "firebase/firestore"
+import { GlobalProvider } from "../../context/globalcontext.jsx"
 
 const GetDataBase = () => {
     const [stock,setStock] = useState([]);
-    const [product, setProduct] = useState([]); 
     const getProducts = async () => {
-        try {
             const productsGet = collection(bd, "productos" )
             const consult = await getDocs(productsGet)
             const response = consult.docs.map(doc => doc = {...doc.data()})
-            setStock(response)
+            return response
+    }
+            const getOneProduct = async () => {
+                const productsGet = collection(bd, "productos" )
+                const consult = await getDocs(productsGet)
+                const response = consult.docs.map(doc => doc = {...doc.data()})
+                return response
             }
-            catch(error) {
-            
-            }
-        }
-        return {stock, getProducts}
+            return {stock, getProducts, getOneProduct}
 
     }
 
-export default GetDataBase;
+export default GetDataBase ;

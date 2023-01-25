@@ -4,12 +4,14 @@ import { useState, useEffect } from "react"
 import ConstructorProducto from './ItemDetailRender.jsx'
 import GetDataBase from "../hooks/GetDataBase.jsx"
 const DetallesProducto = () => {
-    const {stock, getProducts} = GetDataBase()
+    const {getOneProduct} = GetDataBase()
     const [producto, setProducto] = useState([])
     const { id } = useParams()
     useEffect(() => {
-        getProducts()
-            let product = stock.find(productos => productos.id === parseInt(id))
+        getOneProduct().then(response => {
+            let oneProduct = response.filter(e => e.id === parseInt(id))
+            setProducto(oneProduct)
+        })
         }
     , [id]);
     return (

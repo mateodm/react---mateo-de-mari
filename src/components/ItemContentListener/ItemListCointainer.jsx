@@ -11,16 +11,18 @@ const ListaObjetos = () => {
   const {id} = useParams()
   const [productos, setProductos] = useState([])
   useEffect(() => {
-    if (categoria) {
-      getProducts()
-          let productosCategoria = stock.filter(productos => productos.categoria === categoria) 
-          setProductos(productosCategoria)
-    }
-    else {
-      getProducts()
-      let productos = stock
-      setProductos(productos)
-    }}, [categoria]);
+  if (categoria) {
+    getProducts().then(response => {
+      let products = response.filter(stock => stock.categoria === categoria)
+      setProductos(products)
+    } )
+  }
+  else {
+    getProducts().then(response => {
+      setProductos(response)
+    })
+  }
+  }, [categoria]);
   return (
     <>
       <main className="background py-4">
