@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/react---mateo-de-mari/static/css/main.4017a4b9.css",
-    "main.js": "/react---mateo-de-mari/static/js/main.569cded9.js",
+    "main.js": "/react---mateo-de-mari/static/js/main.f905ba24.js",
     "static/js/787.bbce4759.chunk.js": "/react---mateo-de-mari/static/js/787.bbce4759.chunk.js",
     "index.html": "/react---mateo-de-mari/index.html",
     "main.4017a4b9.css.map": "/react---mateo-de-mari/static/css/main.4017a4b9.css.map",
-    "main.569cded9.js.map": "/react---mateo-de-mari/static/js/main.569cded9.js.map",
+    "main.f905ba24.js.map": "/react---mateo-de-mari/static/js/main.f905ba24.js.map",
     "787.bbce4759.chunk.js.map": "/react---mateo-de-mari/static/js/787.bbce4759.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4017a4b9.css",
-    "static/js/main.569cded9.js"
+    "static/js/main.f905ba24.js"
   ]
 }
