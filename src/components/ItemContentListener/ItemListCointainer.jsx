@@ -16,7 +16,7 @@ const ListaObjetos = () => {
           let productosCategoria = stock.filter(productos => productos.categoria === categoria) 
           setProductos(productosCategoria)
     }
-    else if (!categoria) {
+    else {
       getProducts()
       let productos = stock
       setProductos(productos)
