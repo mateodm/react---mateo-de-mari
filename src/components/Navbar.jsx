@@ -2,7 +2,6 @@ import React from "react";
 import carrito from "../carrito.png"
 import { NavLink } from "react-router-dom";
 const Navbar = (props) => {
-    const {carrito} = props;
     return (
         <nav className="navbar navbar_background navbar-expand-lg">
             <div className="container-fluid">

@@ -4,8 +4,8 @@ import { useState, useEffect } from "react"
 import ConstructorProducto from './ItemDetailRender.jsx'
 import GetDataBase from "../hooks/GetDataBase.jsx"
 const DetallesProducto = () => {
-    const {getOneProduct} = GetDataBase()
     const [producto, setProducto] = useState([])
+    const {getOneProduct} = GetDataBase()
     const { id } = useParams()
     useEffect(() => {
         getOneProduct().then(response => {
@@ -14,9 +14,15 @@ const DetallesProducto = () => {
         })
         }
     , [id]);
+    if(producto.length === 1) {
     return (
-        <ConstructorProducto item={producto} />
+        <>
+              {producto.map(({ id, nombre, categoria, precio, img, descripcion }) => (
+                <ConstructorProducto id={id} nombre={nombre} categoria={categoria} precio={precio} img={img} descripcion={descripcion}/>
+              ))}
+      </>
     )
+    }
 }
 
 export default DetallesProducto
