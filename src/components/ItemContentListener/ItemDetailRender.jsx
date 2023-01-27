@@ -15,7 +15,7 @@ const ConstructorProducto = ({ item }) => {
                         </div>
                         <p class="lead">{item.descripcion}</p>
                         <div class="d-flex">
-                            <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                            <button onclick={addValue({item})} class="btn btn-outline-dark flex-shrink-0" type="button">
                                 <i class="bi-cart-fill me-1"></i>
                                 Agregar al carrito
                             </button>

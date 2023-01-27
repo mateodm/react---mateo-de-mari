@@ -1,7 +1,8 @@
 import React from "react";
 import carrito from "../carrito.png"
 import { NavLink } from "react-router-dom";
-const Navbar = () => {
+const Navbar = (props) => {
+    const {carrito} = props;
     return (
         <nav className="navbar navbar_background navbar-expand-lg">
             <div className="container-fluid">
@@ -26,6 +27,7 @@ const Navbar = () => {
                         <li>
                             <div>
                                 <NavLink to="/carrito"> <img class="img_carrito" src={carrito} />  </NavLink>
+                                <div id="contador" className="contador"> productos {carrito.length} </div>
                             </div>
                         </li>
                     </ul>
