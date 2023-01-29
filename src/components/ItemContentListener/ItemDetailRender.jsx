@@ -1,9 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { useContext } from "react"
+import { GlobalContext } from "../../context/globalcontext.jsx"
+import { useState} from "react"
 const ConstructorProducto = (props) => {
-    const { id, nombre, categoria, precio, img, descripcion } = props
-    return (
+    const { id, nombre, categoria, precio, img, descripcion, producto } = props
+/*     const [goToCart, setGoToCart] = useState(false);
+    const onAdd = (quantity) => {
+        setGoToCart(true);
+        addProduct()
+      }; */
+    const {addProduct, cart} = useContext(GlobalContext)
+    return ( 
         <section class="py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
@@ -16,10 +24,9 @@ const ConstructorProducto = (props) => {
                         </div>
                         <p class="lead">{descripcion}</p>
                         <div class="d-flex">
-                            <button class="btn btn-outline-dark flex-shrink-0" type="button">
-                                <i class="bi-cart-fill me-1"></i>
-                                Agregar al carrito
-                            </button>
+{/*                         goToCart
+                        ?  ? <Link className="btn btn-primary" to="/cart">Terminar compra</Link>
+                        : <ItemCount initial={1} stock={5} onAdd={onAdd}/> */}
                         </div>
                     </div>
                 </div>

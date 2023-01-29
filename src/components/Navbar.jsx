@@ -25,8 +25,8 @@ const Navbar = (props) => {
                         </li>
                         <li>
                             <div>
-                                <NavLink to="/carrito"> <img class="img_carrito" src={carrito} />  </NavLink>
-                                <div id="contador" className="contador"> productos {carrito.length} </div>
+                                <NavLink to="/carrito"> <img class="img_carrito" src= {carrito}/>  </NavLink>
+                                <div id="contador" className="contador">  </div>
                             </div>
                         </li>
                     </ul>

@@ -1,43 +1,44 @@
 import React, { createContext, useContext, useState } from 'react'
 
 
-export const GlobalProvider = () => useContext(GlobalContext)
-const GlobalContext = createContext()
 
-const GlobalState = ({children}) => {
-    const {cart, setCart} = useState([])
+
+export const GlobalContext = createContext("")
+const GlobalContextProvider = ({children}) => {
+    const {cart, setCart} = useState([]);
     const repeatProductCheck = (id) => {
         return cart.find(t => t.id === id)
     }
     
-    const addProduct = (producto, cantidad) => {
+    const addProduct = (producto) => {
         if(repeatProductCheck(producto.id)) {
             producto.cantidad++
-    
         }
         else {
-            producto.push(cart)
+            setCart([...cart, producto])
         }
     }
     const removeProduct = (id) => {
-        cart.filter(e => e.id === id)
+        let removeProduct = cart.filter(e => e.id === id)
+        setCart([removeProduct])
     }
     
     const emptyCart = () => {
         setCart([])
     }
     
-    const totalPrice = () => {
-        
-    }
     
     return (
-        <GlobalContext.Provider value={{
-            cart, addProduct
+        <GlobalContext.Provider value={{            cart,
+            addProduct,
+            repeatProductCheck,
+            removeProduct,
+            emptyCart
+
             }}>
             {children}
         </GlobalContext.Provider>
     )
 }
 
-export default GlobalState
+export default GlobalContextProvider
