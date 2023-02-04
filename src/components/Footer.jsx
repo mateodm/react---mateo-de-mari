@@ -19,7 +19,7 @@ const Footer = () => {
                             </p>
                         </div>
                         <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-                            <h5 className="text-uppercase">Categorias (proximamente)</h5>
+                            <h5 className="text-uppercase">Categorias </h5>
 
                             <ul className="list-unstyled mb-0">
                                 <li className="text-black link"><NavLink to = "/categoria/Electronica"> Electronica</NavLink></li>

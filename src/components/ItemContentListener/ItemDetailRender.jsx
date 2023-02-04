@@ -1,17 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { useContext } from "react"
-import { GlobalContext } from "../../context/globalcontext.jsx"
-import { useState} from "react"
+import ItemCount from "./ItemCount.jsx"
 const ConstructorProducto = (props) => {
-    const { id, nombre, categoria, precio, img, descripcion, producto } = props
-/*     const [goToCart, setGoToCart] = useState(false);
-    const onAdd = (quantity) => {
-        setGoToCart(true);
-        addProduct()
-      }; */
-    const {addProduct, cart} = useContext(GlobalContext)
-    return ( 
+    const { nombre, categoria, img, precio, descripcion } = props
+    /*     const [goToCart, setGoToCart] = useState(false);
+        const onAdd = (quantity) => {
+            setGoToCart(true);
+            addProduct()
+          }; */
+    return (
         <section class="py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
@@ -23,11 +19,7 @@ const ConstructorProducto = (props) => {
                             <span>{precio} ars</span>
                         </div>
                         <p class="lead">{descripcion}</p>
-                        <div class="d-flex">
-{/*                         goToCart
-                        ?  ? <Link className="btn btn-primary" to="/cart">Terminar compra</Link>
-                        : <ItemCount initial={1} stock={5} onAdd={onAdd}/> */}
-                        </div>
+                        <ItemCount item={props} />
                     </div>
                 </div>
             </div>

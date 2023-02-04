@@ -1,27 +1,67 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { useContext} from "react"
-import { GlobalContext } from "../../context/globalcontext.jsx"
+import { useContext } from "react"
+import { GlobalContext } from "../context/globalcontext.jsx"
 
 const Cart = () => {
-    const {cart} = useContext(GlobalContext)
-    const { id, nombre, categoria, precio, img } = props
-    cart.map((producto) => {
-        return (
-            <Link to={`/item/${id}`}>
-                <div className="card ms-5 mb-3" style={{ width: '15rem' }} >
-                    <img src={img} className="card-img-top card_img" alt="..." />
-                    <div className="card-body">
-                        <h5 className="card-title">{producto.nombre}</h5>
-                        <p className="card-text">{producto.precio}</p>
-                        <a href="#" className="btn btn-primary">Ver detalles</a>
+    const { cart, removeProduct } = useContext(GlobalContext)
+    return (
+        <div>
+            {cart.length > 0 ? (
+                cart.map((item) => (
+                    <>
+                        <div id="borrarProducto" className="row my-5">
+                            <div className="col-md-1"> </div>
+                            <div className="card col-md-10 mb-4">
+                                <div className="card-body p-4">
+                                    <div className="row align-items-center">
+                                        <div className="col-md-2">
+                                            <img className="carrito-imagen img-fluid" src={item.img} alt={item.nombre} />
+                                        </div>
+                                        <div className="col-md-2 d-flex justify-content-center">
+                                            <div>
+                                                <p className="small text-muted mb-4 pb-2">Nombre</p>
+                                                <p className="lead fw-normal mb-0">{item.nombre}</p>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-2 d-flex justify-content-center">
+                                            <div data-bs-target="#foo">
+                                                <p className="small text-muted mb-4 pb-2">Cantidad</p>
+                                                <p id="cantidadP" className="lead fw-normal mb-0"><img className="menos-carrito" src="./imagenes/menos.png" alt="menos" />No definido aún<img className="mas-carrito" src="./imagenes/mas.png" alt="mas"/></p>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-2 d-flex justify-content-center">
+                                            <div>
+                                                <p className="small text-muted mb-4 pb-2">Precio</p>
+                                                <p className="lead fw-normal mb-0">{item.precio} ars</p>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-2 d-flex justify-content-center">
+                                            <div>
+                                                <p className="small text-muted mb-4 pb-2">Categoria</p>
+                                                <p className="lead fw-normal mb-0">{item.categoria}</p>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-2 d-flex justify-content-center">
+                                            <div>
+                                                <button onClick={() => removeProduct(item.id)} className="btn btn-danger d-flex justifiy-content-center"> Borrar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </>
+                ))
+            ) : (
+                <div className="row align-items-center my-5">
+                    <div className="col-md-12 d-flex justify-content-center">
+                        <h3>El carrito esta vacio</h3>
                     </div>
                 </div>
-            </Link>
-        )
-    })
-
+            )}
+        </div>
+    );
 }
 
-export default Item
+export default Cart
 
