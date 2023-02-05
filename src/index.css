@@ -8,7 +8,6 @@ body {
   max-width: 100vw;
 }
 .navbar_background {
-  background-color: white;
   color: white;
 }
 code {
@@ -21,8 +20,18 @@ code {
 .img_carrito {
   display: flex;
   align-items: center;
-  width: 2.3vh;
+  justify-content: end;
+  width: 2.6vh;
   margin-top: 0.8vh;
+}
+.contador {
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 80%;
+  color: blue;
+  display: flex;
+  justify-content: center;
 }
 .link {
   text-decoration: none;
@@ -31,6 +40,7 @@ code {
 .card_img {
  height: 14vh;
 }
+
 
 .productos {
   display: flex;

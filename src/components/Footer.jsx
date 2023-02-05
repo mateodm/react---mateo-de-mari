@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <section className= "row bg-secondary"> 
+        <section className= "row bg-primary"> 
             <footer className="bg-light text-black text-center text-md-start">
-            <div className="row footertopbox">
+            <div className="row footertopbox bg-primary">
             </div>
                 <div className="container p-4">
                     <div className="row">
@@ -33,7 +33,7 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-                            <h5 className="text-uppercase mb-0">Otros filtros</h5>
+                            <h5 className="text-uppercase mb-0">Lorem impsum</h5>
 
                             <ul className="list-unstyled">
                                 <li>

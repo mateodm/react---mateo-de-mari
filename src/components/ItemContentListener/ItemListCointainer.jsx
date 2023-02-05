@@ -5,7 +5,11 @@ import { useEffect } from "react"
 import { useState } from "react"
 import { useParams } from "react-router-dom"
 import GetDataBase from "../hooks/GetDataBase.jsx"
+import { GlobalContext } from "../../context/globalcontext.jsx";
+import { useContext } from "react"
 const ListaObjetos = () => {
+  const {contador, setContador} = useContext(GlobalContext)
+  setContador(1)
   const {stock, getProducts} = GetDataBase()
   const {categoria} = useParams()
   const {id} = useParams()

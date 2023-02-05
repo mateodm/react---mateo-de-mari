@@ -17,8 +17,8 @@ const DetallesProducto = () => {
     if (producto.length === 1) {
         return (
             <>
-                {producto.map(({ id, nombre, categoria, precio, img, descripcion }) => (
-                    <ConstructorProducto id={id} nombre={nombre} categoria={categoria} precio={precio} img={img} descripcion={descripcion} />
+                {producto.map(({ id, nombre, categoria, precio, img, descripcion, cantidad, cant}) => (
+                    <ConstructorProducto id={id} nombre={nombre} cantidad={cantidad} categoria={categoria} precio={precio} img={img} descripcion={descripcion} cant={cant}/>
                 ))}
             </>
         )
